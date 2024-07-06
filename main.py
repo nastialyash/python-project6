@@ -1,56 +1,53 @@
-import random
-list1 = []
-list2 = [] 
-
-list3 = []
-for i in range(15):
-    list1.append(random.randint(1,10))
-    list2.append(random.randint(1,10))
-for  i in list1:
-    list3.append(i)
-for i in list2:
-    list3.append(i)
-    print(list1,list2,list3)
+def dobNum(list):
+    dob = 1
+    for i in list:
+        dob *= i
+        return dob
+list = [1,2,3,4,5] 
+result = dobNum(list)   
+print(result)
 
 
-
-for i in list1:
-    if i not in list3:
-        list3.append(i)   
-for i in list2:
-    if i not in list3:
-        list3.append(i)   
-print(list1,list2)
-             
-
-for i in range(len(list1)):
-    for i in range(len(list2)):
-        if list1[i] == list2[i]:   
-
-         for i in range(len(list3)):
-                if list1[i] == list3[i]:
-                    break
-         else:
-                list.append(list1[i])
-        break  
-print(list1,list2,list3)
+def minNum(numbers):
+   min = numbers[0]
+   for i in numbers:
+       if i < min:
+           min = i
+   return min
+numbers = [1,2,5,4,8,0,2]
+result = minNum(numbers)
+print(result)
 
 
 
-min  = list1[0]
-max = list1[0]
-for i in range(len(list1)):
-    if list1[i] < min:
-        min = list1[i]
-    if list1[i] > max:
-        max = list1[i]  
-min1  = list2[0]
-max1 = list2[0]
-for i in range(len(list1)):
-    if list2[i] < min1:
-        min1 = list2[i]
-    if list2[i] > max1:
-        max1 = list2[i]
-list3 =[min,max,min1,max1]
-print(list1,list2,list3)                   
 
+
+def delNum(a,number):
+    count = 0
+    for i in a:
+        count += 1
+        return count
+result = [2,3,4,5,1,4,1,7,8,1]
+number = 1
+count = delNum(result,number)
+print(count)
+print(f"New list: {result}")    
+
+
+       
+
+
+
+
+
+
+def listNum(list1,list2):
+    return list1+list2
+list1 = [1,3,5]
+list2 = [3,6,1]
+list3 = listNum(list1,list2)
+print(list3)
+
+
+
+                                       
